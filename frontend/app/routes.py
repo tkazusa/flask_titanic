@@ -1,7 +1,9 @@
 # -*- encoding: UTF-8 -*-
+from flask import render_template
 from app import app
+from app.forms import InputForm
 
 @app.route('/')
-@app.route('/index')
-def index():
-    return "Hello, World!"
+def input():
+    form = InputForm()
+    return render_template('input.html', title='Input', form=form)
