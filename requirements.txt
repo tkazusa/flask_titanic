@@ -1,5 +1,6 @@
 FLask
 Flask-SQLAlchemy
 Flask-WTF
+Flask-Bootstrap
 Flask-Migrate
 pytest
