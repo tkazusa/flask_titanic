@@ -55,7 +55,7 @@ jobs:
       - image:circleci/python:3.6.1
     working_directory: ~/flask_titanic/backend/src
 
-workflow:
+workflows:
   version: 2
   build_frontend_and_backend:
     jobs:
