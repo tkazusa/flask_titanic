@@ -22,7 +22,7 @@ def test_not_found(test_client):
     assert response.status_code == 404
 
     
-def test_post_inputdata(test_client):
+def test_post_inputdata(test_client, no_mlmodel):
     """test for post"""
     response = test_client.post(
         '/',
