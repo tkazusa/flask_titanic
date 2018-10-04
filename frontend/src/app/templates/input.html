@@ -1,0 +1,46 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+    <h2>Input the passenger information</h2>
+    <form action="" method="post" novalidate>
+      {{ form.hidden_tag() }}
+      <p>
+          {{ form.Name.label }}<br>
+          {{ form.Name(size=32) }}
+      </p>
+      <p>
+          {{ form.Sex.label }}<br>
+          {{ form.Sex(size=32) }}
+      </p>
+      <p>
+          {{ form.Age.label }}<br>
+          {{ form.Age(size=32) }}
+      </p>
+      <p>
+          {{ form.Embarked.label }}<br>
+          {{ form.Embarked(size=32) }}
+      </p>
+      <p>
+          {{ form.Pclass.label }}<br>
+          {{ form.Pclass(size=32) }}
+      </p>
+      <p>
+          {{ form.SibSp.label }}<br>
+          {{ form.SibSp(size=32) }}
+      </p>
+      <p>
+          {{ form.Parch.label }}<br>
+          {{ form.Parch(size=32) }}
+      </p>
+      <p>
+          {{ form.Ticket.label }}<br>
+          {{ form.Ticket(size=32) }}
+      </p>
+      <p>
+          {{ form.Cabin.label }}<br>
+          {{ form.Cabin(size=32) }}
+      </p>
+      <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

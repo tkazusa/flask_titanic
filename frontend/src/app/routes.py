@@ -18,7 +18,7 @@ def result():
     # response = requests.post(app.config["URL"], data=json.dumps(request.form), headers=app.config["headers"])
     response = 1
     if response == 1:
-        status = "ざんねーん、死んじゃうよ！"
+        status = "dead"
     else:
-        status = "良かったね！生き残るってさ！"
+        status = "alive"
     return render_template('result.html', status=status)
