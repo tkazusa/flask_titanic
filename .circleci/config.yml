@@ -71,15 +71,15 @@ jobs:
           key: v1-dependencies-{{ checksum "requirements.txt" }}
         
       # run tests!
-      #- run:
-      #    name: run tests
-      #    command: |
-      #      . venv/bin/activate
-      #      pytest 
+      - run:
+          name: run tests
+          command: |
+            . venv/bin/activate
+            pytest 
 
-          #- store_artifacts:
-          #path: test-reports
-          #destination: test-reports
+      - store_artifacts:
+          path: test-reports
+          destination: test-reports
  
 
 workflows:
@@ -87,4 +87,6 @@ workflows:
   build_frontend_and_backend:
     jobs:
       - build_frontend
-      - build_backend
+      - build_backend:
+          - requires:
+            - build_grontend
