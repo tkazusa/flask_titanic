@@ -21,21 +21,3 @@ def test_not_found(test_client):
     response = test_client.get('/api/not/found')
     assert response.status_code == 404
 
-    
-def test_post_inputdata(test_client, no_mlmodel):
-    """test for post"""
-    response = test_client.post(
-        '/',
-        data={"submit": "Send",
-              "parch": "1",
-              "age": "1",
-              "ticket": "test_tciket_number",
-              "embarked": "C",
-              "cabin": "test_cabin_number",
-              "sibsp": "1",
-              "name": "Mr, Taketoshi Kazusa",
-              "sex": "0",
-              "pclass": "1"}
-    )
-    assert response.status_code == 200
-

@@ -10,8 +10,3 @@ def test_client():
     yield testing_client
 
 
-@pytest.fixture()
-def no_mlmodel(mocker):
-    mocker.patch.object(requests.post(), 'prediction', return_value=1)
-
-
