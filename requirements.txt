@@ -5,3 +5,4 @@ Flask-Bootstrap
 Flask-Migrate
 pytest
 pytest-mock
+requests

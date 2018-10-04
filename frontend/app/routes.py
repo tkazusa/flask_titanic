@@ -1,7 +1,7 @@
 # -*- encoding: UTF-8 -*-
-import requests
 import json 
 
+import requests
 from flask import Flask, request, render_template
 from app import app
 from app.forms import InputForm
