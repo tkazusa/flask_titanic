@@ -1,8 +1,8 @@
 # -*- encoding: UTF-8 -*-
 import numpy as np
 from sklearn.externals import joblib
-from config import MODEL_PATH
 
+MODEL_PATH = "/src/app/models/rf.pkl" 
 
 class Predictor(object):
     """prediction class"""

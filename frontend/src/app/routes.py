@@ -15,9 +15,9 @@ def input():
 
 @app.route('/', methods=["POST"])
 def result():
-    # response = requests.post(app.config["URL"], data=json.dumps(request.form), headers=app.config["headers"])
+    # response = requests.post(app.config["URL"], json=json.dumps(request.form))
     response = 1
-    if response == 1:
+    if response.json["status"] == 1:
         status = "dead"
     else:
         status = "alive"
