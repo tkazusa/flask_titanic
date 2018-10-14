@@ -10,3 +10,5 @@ pytest
 pytest-mock
 requests
 scikit-learn
+frontend/src/
+backend/src/
