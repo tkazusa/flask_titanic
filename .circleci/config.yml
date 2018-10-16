@@ -14,9 +14,10 @@ jobs:
       - checkout
       - run:
           name: install dependencies
-          command: |
-            pip install -r ~/flask_titanic/frontend/src/requirements.txt
-            python3 ~/flask_titanic/frontend/src/setup.py install
+          command: pip install -r ~/flask_titanic/frontend/src/requirements.txt
+      - run:
+          name: install frontend module
+          command: python3 ~/flask_titanic/frontend/src/setup.py install
 
       - run:
           name: run tests.
