@@ -1,14 +1,6 @@
 FLask
-Flask-SQLAlchemy
 Flask-WTF
 Flask-Bootstrap
-Flask-Migrate
-matplotlib
-numpy
-pandas
 pytest
 pytest-mock
 requests
-scikit-learn
-frontend/src/
-backend/src/
