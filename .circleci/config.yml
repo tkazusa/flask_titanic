@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  frontend:
+  build_frontend:
     docker:
       - image: circleci/python:3.6.1
 
@@ -41,3 +41,11 @@ jobs:
       - store_artifacts:
           path: test-reports
           destination: test-reports
+
+
+workflows:
+  version: 2
+  fronetend_and_backend:
+    jobs:
+      - build_frontend
+
