@@ -1,1 +1,2 @@
-# flask_titanic
+Flask practice with kaggle titanic tutorial
+===========================================
