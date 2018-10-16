@@ -22,12 +22,30 @@ jobs:
           name: run tests.
           command: pytest 
           working_directory: ~/flask_titanic/frontend/src
+ 
+  build_backend:
+    docker:
+      - image: circleci/python:3.6.1
 
+    working_directory: ~/flask_titanic
 
+    steps:
+      - checkout
+      - run:
+          name: install dependencies
+          command: |
+            pip install -r ~/flask_titanic/backend/src/requirements.txt
+            python3 ~/flask_titanic/backend/src/setup.py install
+
+      - run:
+          name: run tests.
+          command: pytest 
+          working_directory: ~/flask_titanic/backend/src
 
 workflows:
   version: 2
   fronetend_and_backend:
     jobs:
       - build_frontend
-
+      - build_backend  
+           
