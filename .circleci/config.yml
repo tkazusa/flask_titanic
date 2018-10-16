@@ -38,7 +38,7 @@ jobs:
           
       - run:
           name: install backend module
-          command: python3 ~/flask_titanic/backend/src/setup.py install
+          command: sudo python3 ~/flask_titanic/backend/src/setup.py install
 
       - run:
           name: run tests.
