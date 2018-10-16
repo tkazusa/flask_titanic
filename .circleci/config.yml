@@ -34,9 +34,11 @@ jobs:
       - checkout
       - run:
           name: install dependencies
-          command: |
-            pip install -r ~/flask_titanic/backend/src/requirements.txt
-            python3 ~/flask_titanic/backend/src/setup.py install
+          command: sudo pip install -r ~/flask_titanic/backend/src/requirements.txt
+          
+      - run:
+          name: install backend module
+          command: python3 ~/flask_titanic/backend/src/setup.py install
 
       - run:
           name: run tests.
