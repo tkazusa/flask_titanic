@@ -3,7 +3,11 @@ Flask practice with kaggle titanic tutorial
 
 Screenshots
 -----------
+You can add a passenger information on a imput form.
+
 ![input_form](https://github.com/tkazusa/flask_titanic/blob/images/flask_titanic_demo1.png)
+
+Then, a machine learning model return a prediction whether he/she would servive or not the tragedy. 
 
 ![prediction](https://github.com/tkazusa/flask_titanic/blob/images/flask_titanic_demo2.png)
 
