@@ -1,6 +1,11 @@
 Flask practice with kaggle titanic tutorial
 ===========================================
 
+Screenshots
+-----------
+![input_form](https://raw.githubusercontent.com/tkazusa/img_garage/flask_titanic_demo1.png)
+
+![prediction](https://raw.githubusercontent.com/tkazusa/img_garage/flask_titanic_demo2.png)
 
 Commands
 --------
