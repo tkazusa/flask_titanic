@@ -8,19 +8,18 @@ jobs:
     docker:
       - image: circleci/python:3.6.1
 
-    working_directory: ~/flask_titanic/frontend/src
+    working_directory: ~/flask_titanic
 
     steps:
       - checkout
       - run:
           name: install dependencies
           command: pip install -r ~/flask_titanic/frontend/src/requirements.txt
-          working_directory: ~/flasl_titanic/frontend/src
 
       - run:
           name: run tests.
           command: pytest 
-          working_directory: ~/frontend/src
+          working_directory: ~/flask_titanic/frontend/src
 
 
 
