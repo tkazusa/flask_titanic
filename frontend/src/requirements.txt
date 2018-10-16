@@ -1,0 +1,6 @@
+FLask
+Flask-WTF
+Flask-Bootstrap
+pytest
+pytest-mock
+requests

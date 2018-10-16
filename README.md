@@ -1,5 +1,6 @@
 Flask practice with kaggle titanic tutorial
 ===========================================
+[![CircleCI](https://circleci.com/gh/tkazusa/flask_titanic/tree/master.svg?style=svg)](https://circleci.com/gh/tkazusa/flask_titanic/tree/master)
 
 Screenshots
 -----------
