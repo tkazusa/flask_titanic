@@ -21,6 +21,34 @@ Clean up the web apps.
 
 ```
 make clean
-
 ```
+
+
+Install app
+-----------
+```
+make install
+```
+
+
+Build Docker images
+-------------------
+```
+make build
+```
+
+
+Run on docker
+-------------
+```
+make run
+```
+
+
+Clean containers and images on docker
+-------------------------------------
+```
+make clean
+```
+
 
