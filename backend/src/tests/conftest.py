@@ -22,6 +22,6 @@ def test_data():
         "SibSp": '1',
         "Parch": '1',
         "Cabin": 'C123',
-        "Tciket": '113903'
+        "Ticket": '113903'
     }
     yield testing_data
