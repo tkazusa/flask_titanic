@@ -13,7 +13,7 @@ def test_client():
 
 @pytest.fixture(scope='module')
 def test_data():
-    data = {
+    testing_data = {
         "Name": 'Taketoshi, Mr. Kazusa',
         "Sex": 0,
         "Age": 25,
@@ -24,5 +24,4 @@ def test_data():
         "Cabin": 'C123',
         "Tciket": '113903'
     }
-    testing_data = json.dumps(data)
     yield testing_data
