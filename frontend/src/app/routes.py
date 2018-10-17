@@ -20,10 +20,10 @@ def result():
     status = response.content.decode()
     dict_status = ast.literal_eval(status)
 
-    if dict_status["status"] == 0:
-        status = "dead"
+    if dict_status['status'] == 0:
+        status = 'dead'
     else:
-        status = "alive"
+        status = 'alive'
 
     return render_template('result.html', status=status)
 
