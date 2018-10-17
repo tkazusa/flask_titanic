@@ -2,6 +2,8 @@ Flask practice with kaggle titanic tutorial
 ===========================================
 [![CircleCI](https://circleci.com/gh/tkazusa/flask_titanic/tree/master.svg?style=svg)](https://circleci.com/gh/tkazusa/flask_titanic/tree/master)
 
+This is a web application with a machine learning model for Flask practice. Users put information about passengers in the form, then the ML model return the predicton whether passengers surviced the tragedy. 
+
 Screenshots
 -----------
 You can add a passenger information on a imput form.
