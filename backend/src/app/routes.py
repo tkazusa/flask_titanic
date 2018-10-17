@@ -1,11 +1,11 @@
 # -*- encoding: UTF-8 -*-
-import json 
+import json
 
-from flask import Flask, jsonify, request
+from flask import jsonify, request
 import pandas as pd
 
 from app import app
-from app.people import People 
+from app.people import People
 
 
 @app.route('/', methods=['POST'])
@@ -24,6 +24,5 @@ def post():
     })
     people = People(INPUT_DATA)
     status = people.status_predict().tolist()[0]
-    response = jsonify({"status": status})
+    response = jsonify({'status': status})
     return response
-

@@ -1,7 +1,8 @@
 # -*- encoding: UTF-8 -*-
 from flask_wtf import FlaskForm
-from wtforms import IntegerField, RadioField, SelectField, StringField, TextAreaField, SubmitField
+from wtforms import IntegerField, RadioField, SelectField, StringField, SubmitField
 from wtforms.validators import DataRequired
+
 
 class InputForm(FlaskForm):
     Name = StringField('Name', validators=[DataRequired()])

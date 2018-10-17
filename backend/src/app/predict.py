@@ -1,9 +1,10 @@
 # -*- encoding: UTF-8 -*-
-import numpy as np
+import os
 from sklearn.externals import joblib
 
 
-MODEL_PATH = "/src/app/models/rf.pkl" 
+MODEL_PATH = os.path.normpath(os.path.join(os.path.abspath(__name__),
+                                           '../app/models/rf.pkl'))
 
 
 class Predictor(object):

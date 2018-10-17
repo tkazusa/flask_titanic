@@ -1,6 +1,4 @@
 # -*- encoding: UTF-8 -*-
-import pytest
-from app import app
 
 
 def test_get_route(test_client):
@@ -12,7 +10,7 @@ def test_get_route(test_client):
     response = test_client.get('/')
     assert response.status_code == 200
 
-    
+
 def test_not_found(test_client):
     """
     GIVEN a Flask application

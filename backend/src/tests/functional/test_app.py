@@ -1,6 +1,6 @@
 # -*- encoding: UTF-8 -*-
-import pytest
-from app import app
+import json
+
 
 def test_prediction(test_client, test_data):
     """
@@ -8,10 +8,11 @@ def test_prediction(test_client, test_data):
     WHEN the '/' page is requested (GET)
     THEN check the response is valid
     """
-    #response = test_client.post('/', data=test_data, headers={'Content-Type': 'application/json'})
-    #print(response.data)
-    #assert response.status_code == 200
-    #assert response.json()['status'] == 0 or 1
+    response = test_client.post('/', json=json.dumps(test_data), headers={'Content-Type': 'application/json'})
+    assert response.status_code == 200
+
+    status = response.data
+    assert status == b'{"status":1}' or b'{"status":0}'
 
 
 def test_not_found(test_client):
