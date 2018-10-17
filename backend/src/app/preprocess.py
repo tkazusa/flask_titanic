@@ -81,11 +81,9 @@ def preprocess(data):
     data = data.assign(children=data.apply(lambda row: deriveChildren(row['Age'], row['Parch']), axis = 1))
     data['parents'] = data.apply(lambda row: deriveParents(row['Age'], row['Parch']), axis = 1)
     data['responsibleFor'] = data.apply(lambda row: deriveResponsibleFor(row['children'], row['SibSp']), axis = 1)
-    # data['accompaniedBy'] = data.apply(lambda row: deriveAccompaniedBy(row['parents'], row['SibSp']), axis = 1)
     data['unaccompaniedChild'] = data.apply(lambda row: unaccompaniedChild(row['Age'], row['Parch']), axis = 1)
 
     # drop unused columns
-    print(data.columns)
     data = data.drop(['Name', 'Cabin', 'Parch', 'SibSp', 'title', 'Ticket'], axis=1)
 
     # label encode string features
@@ -101,7 +99,7 @@ def preprocess(data):
     data['class'] = data['Pclass'].astype(int, copy=False)
     data = data.drop(['Pclass'], axis=1)
     data = data.drop(['encodedTitle'], axis=1)
- 
+
     if 'Survived' in data.columns:
         data['Survived'] = data['Survived'].astype(int, copy=False)
         return data.drop(['Survived'], axis=1), data['Survived']

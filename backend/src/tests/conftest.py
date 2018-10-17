@@ -1,7 +1,4 @@
 # -*- encoding: UTF-8 -*-
-import json
-
-import requests
 import pytest
 from app import app
 
@@ -10,6 +7,7 @@ from app import app
 def test_client():
     testing_client = app.test_client()
     yield testing_client
+
 
 @pytest.fixture(scope='module')
 def test_data():
