@@ -19,7 +19,7 @@ def test_data():
         "Age": 25,
         "Embarked": 'C',
         "Pclass": '1',
-        "SibSP": '1',
+        "SibSp": '1',
         "Parch": '1',
         "Cabin": 'C123',
         "Tciket": '113903'
